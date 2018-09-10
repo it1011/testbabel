@@ -9,19 +9,20 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
                 use: {
                     loader: 'babel-loader',
                     options: {
                         presets: [['@babel/preset-env', {
                             
                                 "useBuiltIns": "usage",
-                                "targets": {
-                                    "chrome": "45",
-                                    "ie": "10"
-                                  },
-                                  debug:true,
-                                  loose:true,
-                                  modules: false
+                                // "targets": {
+                                //     "chrome": "45",
+                                //     "ie": "10"
+                                //   },
+                                //   debug:true,
+                                //   loose:false,
+                                //   modules: false
                               
                         }]]
                     }
